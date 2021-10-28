@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        padding: 50px;
+        background-color: rgb(228, 223, 151);
+    }
+    .container-sm {
+        margin: 10px;
+        text-align: center;
+        height: 300px;
+        width: 100%;
+        border: 1px solid black;
+        background-color: rgb(148, 206, 186);
+        border-radius: 10px;
+    }
+    .content{
+        border-radius: 1px solid black;
+        margin: 20px;
+    }
+    .content p{
+        padding: 5px;
+    }
+
+    
+</style>
+
+<body>
+    <div class="container-sm" id="cont">
+        <!-- Content here -->
+        <div class="content">
+            <h2>Random Quote Generator</h2>
+            <p id="quote">Good Thought</p>
+            <p id="author">Author of the Thought</p>
+            <br>
+
+        <button type="button" class="btn btn-warning"id="btn" onclick="Change()">Change Quote</button>
+            
+        </div>
+        
+    </div>
+
+
+
+    <script>
+        const quotes = [
+            {
+                quote: "“Dream is not the thing you see in sleep but is that thing that doesn't let you sleep.",
+                author: "-APJ Abdul Kalam"
+            },
+            {
+                quote: "“Be faithful in small things because it is in them that your strength lies",
+                author: "-Mother Teresa"
+            },
+            {
+                quote: "“Take up one idea. Make that one idea your life; dream of it; think of it; live on” ",
+                author: "-Swami Vivekananda"
+            },
+            {
+                quote: "“Swarajya is my birthright and I shall have it!”",
+                author: "Lokmanya Tilak "
+            },
+            {
+                quote: "“Freedom is a boon, which everyone has the right to receive.” ",
+                author: "-Chhatrapati Shivaji Maharaj "
+            },
+            {
+                quote: "We shall overcome and success will be ours in the future. The future belongs to us”",
+                author: "-Savitribai Phule"
+            },
+            {
+                quote: "“Give me blood and I will give you freedom!”",
+                author: "-Netaji Subhas Chandra Bose "
+            },
+            {
+                quote: "“Ignorance is always afraid of change.”",
+                author: "-Pandit Jawaharlal Nehru"
+            },
+            {
+                quote: "“First they ignore you, then they laugh at you, then they fight you, then you win.”",
+                author: "– Mahatma Gandhi Quotes "
+            },
+            {
+                quote: "“Education is that which remains, if one has forgotten everything he learned in school.”",
+                author: " -Albert Einstein  "
+            },
+        ]
+
+        function Change() {
+            document.getElementById('btn').addEventListener('click', Change);
+            let a = parseInt(Math.random() * quotes.length);
+            console.log(a);
+            document.getElementById('quote').textContent = quotes[a].quote;
+            document.getElementById('author').textContent = quotes[a].author;
+        }
+
+
+     // if required in sequence then use for each loop
+    </script>
+</body>
+
+</html>
